@@ -22,6 +22,9 @@ MemLoop:
     dex         ; sama aja dengan register x--
     bne MemLoop ; bne itu adalah branch not equal to zero jadi kalau x bukan 0 maka akan terus kembali menjalankan MemLoop
 
+    sta $00     ; Jika register x = 0, bne akan langsung keluar jadi memory $00 tidak diset dengan angka 0 karena loop tidak lengkap
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fill the ROM size to exactly 4KB
 ; Catridge atari wajib di isi full 4KB
